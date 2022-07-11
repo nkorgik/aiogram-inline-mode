@@ -13,9 +13,9 @@ async def on_startup(_):
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
     await message.answer(text='Welcome to our excellent bot!',
-                         reply_markup=)
+                         reply_markup=inline_keyboard.ikb)
 
 
 if __name__ == "__main__":
     executor.start_polling(dispatcher=dp,
-                           on_startup="")
+                           on_startup=on_startup)
