@@ -4,7 +4,7 @@ import logging
 from aiogram import Bot, Dispatcher
 from config import TOKEN_API
 
-from handlers import register_handlers
+from handlers import register_handlers, register_queries
 
 
 async def main():
@@ -15,6 +15,7 @@ async def main():
     dp = Dispatcher(bot)
 
     register_handlers(dp)
+    register_queries(dp)
 
     try:
         await dp.start_polling()
