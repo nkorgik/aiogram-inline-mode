@@ -23,7 +23,8 @@ async def inline_echo(inline_query: types.InlineQuery) -> None:
     item = InlineQueryResultArticle(
         id=result_id,
         title='ECHO BOT',
-        input_message_content=input_content
+        input_message_content=input_content,
+        thumb_url='https://media.istockphoto.com/photos/funny-winking-kitten-picture-id1267021092?k=20&m=1267021092&s=612x612&w=0&h=yzwxZXklHn5NwDTgKmbq2Ojtg3pga6j8K3oT7lLneAY='
     )
 
     await bot.answer_inline_query(inline_query_id=inline_query.id,
